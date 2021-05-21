@@ -6,13 +6,37 @@
 git clone https://github.com/Vonng/datalets.git
 ```
 
+## Datalet 说明
+
+"Datalet"类似于"小程序（Applet）"，是一个功能完备的自包含的数据应用。
+例如，Pigsty监控系统就是一个Datalet，Pigsty的专业版面板和附加功能就将以Datalet的形式发布。
+
+**Datalet的特征是**：
+
+* 专注于数据处理、分析与可视化
+* 既没有"前端"，也没有"后端"
+* 使用PostgreSQL存储数据实现业务逻辑
+* 使用Grafana进行数据可视化并交互
+* 在用户界面（ui），数据（sql），可执行文件（bin）三者中至少包含一项。
+* 可以在Pigsty环境中直接安装运行，通过`make`实现一键安装。
+
+**Datalet的目录结构**：
+
+* `ui` ： 存储监控面板的JSON定义。如果有多个Dashboard，放置在Datalet同名目录中，如`ui/redis`
+* `sql` ： 存储发布至Pigsty元数据库的SQL脚本，通常包含表定义与原始数据。
+* `bin` ： 存储二进制或脚本文件，用于生成、处理、维护数据
+* `Makefile`： Datalet的安装脚本
+
+
+## Datalets Examples
+
+
+
 
 ### 案例1：[国家统计局数据分析与可视化](stats/)
 
 * 第七次中国人口普查数据分析
 * 货币供应量数据分析
-
-[`stats`](stats/)
 
 ```bash
 cd stats;
@@ -24,8 +48,6 @@ make           # 添加面板与数据
 
 分析WHO官方发布的疫情数据
 
-[`covid`](covid/)
-
 ```bash
 cd covid;
 make           # 添加面板与数据 
@@ -36,8 +58,6 @@ make reload    # 下载并加载最新数据
 ### 案例3： [ISD全球地表气象观测站数据](isd/)
 
 呈现全球3万个地表气象观测站120年间的观测数据
-
-[`isd`](isd/)
 
 ```bash
 cd isd;
@@ -51,28 +71,20 @@ make daily       # 加载每日摘要数据
 
 类似Pigsty，但是针对Redis。
 
-
 ```bash
 cd redis;
 make ui          # 添加面板与数据
 ```
 
 
-
 ### 案例5： [PostgreSQL CSV日志分析](pglog/)
 
 给定一份PostgreSQL CSV日志，详细分析日志期间出现的事件。
-
-[`pglog`](pglog/)
 
 ```bash
 TBD
 ```
 
-
-### 案例6： 
-
-利用Grafana制作一个PostgreSQL数据库目录浏览器！ 下一代PgAdmin
 
 
 ### 其他筹划中案例

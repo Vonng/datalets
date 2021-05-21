@@ -1,6 +1,6 @@
 # Redis监控系统
 
-Redis的监控比较简单，因此不再作为单独的软件产品管理。
+Redis的监控较为简单，这里直接给出Dashboard。后续可能会单独作为Pigsty的一部分
 
 
 本项目只提供监控Dashboards，包括4个监控面板：
