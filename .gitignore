@@ -1,0 +1,10 @@
+temp/
+
+datalets.iml
+.DS_Store
+.idea/
+.vscode/
+
+
+# download it
+covid/data/history.csv
