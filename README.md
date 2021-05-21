@@ -1,11 +1,11 @@
 # Datalets
 
-用于演示Pigsty功能的数据分析小程序。
-将本项目克隆至 pigsty meta 节点上。
+用于演示Pigsty数据分析功能的案例集合，将本项目克隆至 pigsty meta 节点上，选择所需案例安装即可。
 
 ```bash
 git clone https://github.com/Vonng/datalets.git
 ```
+
 
 ### 案例1：[国家统计局数据分析与可视化](stats/)
 
@@ -47,8 +47,19 @@ make daily       # 加载每日摘要数据
 ...
 ```
 
+### 案例4: [Redis监控系统](redis/)
 
-### 案例4： [PostgreSQL CSV日志分析](pglog/)
+类似Pigsty，但是针对Redis。
+
+
+```bash
+cd redis;
+make ui          # 添加面板与数据
+```
+
+
+
+### 案例5： [PostgreSQL CSV日志分析](pglog/)
 
 给定一份PostgreSQL CSV日志，详细分析日志期间出现的事件。
 
@@ -59,7 +70,7 @@ TBD
 ```
 
 
-### 案例5： [PostgreSQL 系统目录数据分析](pgcat)
+### 案例6： 
 
 利用Grafana制作一个PostgreSQL数据库目录浏览器！ 下一代PgAdmin
 
@@ -73,3 +84,4 @@ TBD
 * 人群画像分析，广告行业，标签圈选。
 * 热力图，大屏。
 * 搜索框，全文检索，基本增删改查
+* PostgreSQL 系统目录数据分析
