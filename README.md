@@ -82,9 +82,9 @@ make ui          # 添加面板与数据
 给定一份PostgreSQL CSV日志，详细分析日志期间出现的事件。
 
 ```bash
-TBD
+make            # 安装datalet: 数据与面板
+make reload     # 加载当天数据库日志作为分析样本
 ```
-
 
 
 ### 其他筹划中案例

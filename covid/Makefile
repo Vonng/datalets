@@ -39,4 +39,4 @@ reload: download load
 restart:
 	sudo systemctl restart grafana-server
 
-.PHONY: default all ui sql re
+.PHONY: default all ui sql restart
